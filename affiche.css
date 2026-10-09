@@ -1,0 +1,187 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9edf5;
+    padding: 25px;
+    color: #102b55;
+}
+
+.affiche {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.affiche-header {
+    background: #102b55;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.affiche-header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.affiche-header span {
+    color: #ff941f;
+}
+
+.affiche-header p {
+    margin-top: 8px;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 25px;
+    background: linear-gradient(135deg, #ffffff, #eaf3ff);
+}
+
+.tagline {
+    color: #e98016;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: #f28b19;
+}
+
+.hero > p:last-child {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.service {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 14px;
+}
+
+.transfer {
+    background: #e7f1ff;
+    border-bottom: 5px solid #2878df;
+}
+
+.withdrawal {
+    background: #fff0df;
+    border-bottom: 5px solid #f28b19;
+}
+
+.deposit {
+    background: #e5f7eb;
+    border-bottom: 5px solid #26965b;
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #102b55;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.service h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.benefits {
+    background: #102b55;
+    color: white;
+    padding: 22px 15px;
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.benefits p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.affiche-footer {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.affiche-footer h2 {
+    color: #e98016;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.affiche-footer p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.contact {
+    font-weight: bold;
+    color: #102b55;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .poster-header h1 {
+        font-size: 34px;
+    }
+}
+.affiche-image{
+    display: block;
+    width: 80%;
+    max-width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 20px auto;
+}
