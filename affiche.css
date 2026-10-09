@@ -178,10 +178,9 @@ body {
 }
 .affiche-image{
     display: block;
-    width: 80%;
-    max-width: 450px;
-    height: 250px;
+    width: 100px;
+    height: 80px !important;
     object-fit: cover;
-    border-radius: 15px;
-    margin: 20px auto;
+    border-radius: 8px;
+    margin: 10px auto;
 }
