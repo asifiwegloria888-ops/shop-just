@@ -1,0 +1,149 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05091f;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* MAIN POSTER */
+.poster {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 560px;
+    background: linear-gradient(145deg, #080d2c, #020519);
+    border: 2px solid #c7a15a;
+    border-radius: 8px;
+    padding: 35px 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c7a15a;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.header h1 span {
+    color: #d99538;
+}
+
+.header p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7a15a;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+/* SERVICE TITLE */
+.poster h3 {
+    text-align: center;
+    font-size: clamp(20px, 3vw, 30px);
+    color: #d99538;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* CONTACT GRID */
+.footer-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* CONTACT CARD */
+.item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 161, 90, 0.5);
+    border-radius: 12px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    background: rgba(201, 161, 90, 0.12);
+}
+
+/* PHONE NUMBERS */
+.item span {
+    display: block;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 900;
+    color: #f2f2f2;
+    overflow-wrap: anywhere;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* CONTACT NAMES */
+.item small {
+    display: block;
+    font-size: clamp(13px, 2vw, 18px);
+    font-weight: bold;
+    color: #d99538;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .poster {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        letter-spacing: 1px;
+    }
+
+    .header p {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .footer-contact {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .item {
+        padding: 18px 10px;
+    }
+}
+
