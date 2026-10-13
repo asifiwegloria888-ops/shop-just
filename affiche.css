@@ -1,186 +1,178 @@
+/* ===== Couleurs (palette chocolat & doré) ===== */
+:root {
+    --fond: #1b1109;
+    --fond-carte: #2a1a0f;
+    --dore: #c9973f;
+    --dore-clair: #e3c07a;
+    --creme: #efe6d6;
+}
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #e9edf5;
-    padding: 25px;
-    color: #102b55;
-}
-
-.affiche {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.affiche-header {
-    background: #102b55;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-}
-
-.affiche-header h1 {
-    font-size: 42px;
-    letter-spacing: 2px;
-}
-
-.affiche-header span {
-    color: #ff941f;
-}
-
-.affiche-header p {
-    margin-top: 8px;
-    letter-spacing: 3px;
-    font-size: 12px;
-}
-
-.hero {
-    text-align: center;
-    padding: 40px 25px;
-    background: linear-gradient(135deg, #ffffff, #eaf3ff);
-}
-
-.tagline {
-    color: #e98016;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
-}
-
-.hero h2 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.hero h2 span {
-    color: #f28b19;
-}
-
-.hero > p:last-child {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px;
-}
-
-.service {
-    text-align: center;
-    padding: 25px 15px;
-    border-radius: 14px;
-}
-
-.transfer {
-    background: #e7f1ff;
-    border-bottom: 5px solid #2878df;
-}
-
-.withdrawal {
-    background: #fff0df;
-    border-bottom: 5px solid #f28b19;
-}
-
-.deposit {
-    background: #e5f7eb;
-    border-bottom: 5px solid #26965b;
-}
-
-.icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    background: #102b55;
-    color: white;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 35px;
+    justify-content: center;
+    padding: 20px;
+    background: #0d0804;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-.service h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
+/* ===== Affiche ===== */
+.poster {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 36px 36px;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(201, 151, 63, 0.18), transparent 45%),
+        radial-gradient(circle at 100% 100%, rgba(201, 151, 63, 0.12), transparent 40%),
+        var(--fond);
+    border: 2px solid var(--dore);
+    border-radius: 18px;
+    box-shadow: 0 0 0 6px var(--fond), 0 0 0 7px rgba(201, 151, 63, 0.5),
+                0 20px 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
-.service p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.benefits {
-    background: #102b55;
-    color: white;
-    padding: 22px 15px;
+/* ===== En-tête ===== */
+.header {
     display: flex;
-    justify-content: space-around;
-    gap: 12px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 28px;
 }
 
-.benefits p {
-    font-size: 14px;
-    font-weight: bold;
+.header p {
+    order: -1;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--dore);
+    margin-bottom: 4px;
 }
 
-.affiche-footer {
+.header h1 {
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--creme);
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.header h1 span {
+    background: linear-gradient(180deg, var(--dore-clair), var(--dore));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--dore);
+}
+
+/* ===== Titre de section ===== */
+h3 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-align: center;
-    padding: 30px 15px;
+    color: var(--dore-clair);
 }
 
-.affiche-footer h2 {
-    color: #e98016;
-    font-size: 24px;
-    margin-bottom: 10px;
+h3::before,
+h3::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dore));
 }
 
-.affiche-footer p {
-    margin-bottom: 10px;
-    line-height: 1.5;
+h3::after {
+    background: linear-gradient(270deg, transparent, var(--dore));
 }
 
-.contact {
-    font-weight: bold;
-    color: #102b55;
+/* ===== Cartes de contact ===== */
+.footer-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
+.item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    align-items: center;
+    padding: 16px 20px;
+    background: var(--fond-carte);
+    border: 1px solid rgba(201, 151, 63, 0.45);
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Pastille ronde avec le nom de l'opérateur */
+.operateur {
+    grid-row: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    padding: 6px;
+    border-radius: 50%;
+    background: var(--fond);
+    border: 2px solid var(--dore);
+    box-shadow: 0 0 0 3px var(--fond-carte), 0 0 0 4px rgba(201, 151, 63, 0.5);
+    font-size: 0.62rem;
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--dore-clair);
+}
+
+.operateur.airtel { color: var(--dore-clair); }
+.operateur.orange { color: var(--dore); }
+.operateur.mpesa  { color: var(--creme); }
+
+.item span {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--creme);
+    line-height: 1.1;
+}
+
+.item small {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--dore);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+    .poster {
+        padding: 28px 18px;
     }
 
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .services {
+    .footer-contact {
         grid-template-columns: 1fr;
     }
 
-    .poster-header h1 {
-        font-size: 34px;
+    .header p {
+        font-size: 1.1rem;
+        letter-spacing: 4px;
     }
-}
-.affiche-image{
-    display: block;
-    width: 100px;
-    height: 80px !important;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 10px auto;
 }
