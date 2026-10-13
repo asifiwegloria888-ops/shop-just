@@ -1,10 +1,10 @@
-/* ===== Couleurs (palette chocolat & doré) ===== */
+/* ===== Couleurs (palette bleu nuit) ===== */
 :root {
-    --fond: #1b1109;
-    --fond-carte: #2a1a0f;
-    --dore: #c9973f;
-    --dore-clair: #e3c07a;
-    --creme: #efe6d6;
+    --fond: #0a1830;
+    --fond-carte: #10244a;
+    --accent: #4f9bff;
+    --accent-clair: #9fcbff;
+    --clair: #eaf2ff;
 }
 
 * {
@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: #0d0804;
+    background: #050d1f;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
@@ -27,15 +27,15 @@ body {
 .poster {
     position: relative;
     width: 100%;
-    max-width: 820px;
+    max-width: 880px;
     padding: 28px 24px 26px;
     background:
-        radial-gradient(circle at 15% 0%, rgba(201, 151, 63, 0.18), transparent 45%),
-        radial-gradient(circle at 100% 100%, rgba(201, 151, 63, 0.12), transparent 40%),
+        radial-gradient(circle at 15% 0%, rgba(79, 155, 255, 0.18), transparent 45%),
+        radial-gradient(circle at 100% 100%, rgba(79, 155, 255, 0.12), transparent 40%),
         var(--fond);
-    border: 2px solid var(--dore);
+    border: 2px solid var(--accent);
     border-radius: 16px;
-    box-shadow: 0 0 0 5px var(--fond), 0 0 0 6px rgba(201, 151, 63, 0.5),
+    box-shadow: 0 0 0 5px var(--fond), 0 0 0 6px rgba(79, 155, 255, 0.5),
                 0 18px 40px rgba(0, 0, 0, 0.6);
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ body {
     font-size: 1.1rem;
     font-weight: 800;
     letter-spacing: 5px;
-    color: var(--dore);
+    color: var(--accent);
     margin-bottom: 2px;
 }
 
@@ -63,16 +63,16 @@ body {
     font-weight: 900;
     line-height: 1;
     letter-spacing: 2px;
-    color: var(--creme);
+    color: var(--clair);
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .header h1 span {
-    background: linear-gradient(180deg, var(--dore-clair), var(--dore));
+    background: linear-gradient(180deg, var(--accent-clair), var(--accent));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: var(--dore);
+    color: var(--accent);
 }
 
 /* ===== Titre de section ===== */
@@ -85,7 +85,7 @@ h3 {
     font-weight: 700;
     letter-spacing: 3px;
     text-align: center;
-    color: var(--dore-clair);
+    color: var(--accent-clair);
 }
 
 h3::before,
@@ -93,11 +93,11 @@ h3::after {
     content: "";
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--dore));
+    background: linear-gradient(90deg, transparent, var(--accent));
 }
 
 h3::after {
-    background: linear-gradient(270deg, transparent, var(--dore));
+    background: linear-gradient(270deg, transparent, var(--accent));
 }
 
 /* ===== Cartes de contact (3 cartes côte à côte) ===== */
@@ -116,7 +116,7 @@ h3::after {
     align-items: center;
     padding: 14px 12px;
     background: var(--fond-carte);
-    border: 1px solid rgba(201, 151, 63, 0.45);
+    border: 1px solid rgba(79, 155, 255, 0.45);
     border-radius: 12px;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
@@ -132,26 +132,26 @@ h3::after {
     padding: 5px;
     border-radius: 50%;
     background: var(--fond);
-    border: 2px solid var(--dore);
-    box-shadow: 0 0 0 3px var(--fond-carte), 0 0 0 4px rgba(201, 151, 63, 0.5);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 3px var(--fond-carte), 0 0 0 4px rgba(79, 155, 255, 0.5);
     font-size: 0.6rem;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
-    color: var(--dore-clair);
+    color: var(--accent-clair);
 }
 
-.operateur.airtel { color: var(--dore-clair); }
-.operateur.orange { color: var(--dore); }
-.operateur.mpesa  { color: var(--creme); }
+.operateur.airtel { color: var(--accent-clair); }
+.operateur.orange { color: var(--accent); }
+.operateur.mpesa  { color: var(--clair); }
 
 .item span {
     font-size: clamp(1.05rem, 2.6vw, 1.3rem);
     font-weight: 900;
     letter-spacing: 0.5px;
-    color: var(--creme);
+    color: var(--clair);
     line-height: 1.2;
     align-self: end;
 }
@@ -161,7 +161,7 @@ h3::after {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--dore);
+    color: var(--accent);
     align-self: start;
 }
 
